@@ -1,4 +1,4 @@
-package com.LoginServlet;
+package com.Servlet;
 
 import java.io.IOException;
 
@@ -9,9 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import com.LoginBean.LoginBean;
-import com.LoginDao.LoginDao;
-import com.LoginDao.LoginDaoInterface;
+
+import com.Bean.LoginBean;
+import com.Dao.LoginDao;
+import com.Dao.LoginDaoInterface;
 
 
 @WebServlet("/LoginPageServlet")
@@ -54,8 +55,10 @@ public class LoginPageServlet extends HttpServlet {
 			HttpSession session=request.getSession();
 			session.setAttribute("username", Username);
 			
-			RequestDispatcher rd = request.getRequestDispatcher("view/afterlogin.jsp");
-			rd.forward(request, response);
+			
+			response.sendRedirect("view/Add_Society.jsp");
+//			RequestDispatcher rd = request.getRequestDispatcher("view/Add_Society.jsp");
+//			rd.forward(request, response);
 			
 			System.out.println("*********** AFTER DISPATCHER*************");
 			

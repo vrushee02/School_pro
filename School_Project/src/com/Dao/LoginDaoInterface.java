@@ -1,4 +1,4 @@
-package com.LoginDao;
+package com.Dao;
 
 public interface LoginDaoInterface {
 

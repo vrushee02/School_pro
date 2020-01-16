@@ -1,4 +1,4 @@
-package com.LoginDao;
+package com.Dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,7 +14,7 @@ Connection con=DBC.GetConnection();
 
 
 	public boolean Login(String Username,String Password)
-	{
+	{	
 		try {
 			System.out.println("----------IN LOGIN METHOD---------------");
 		PreparedStatement ps=con.prepareStatement("select * from logintable where username=? and password=?");

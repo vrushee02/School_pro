@@ -1,4 +1,4 @@
-package com.LoginBean;
+package com.Bean;
 
 public class LoginBean {
 	
