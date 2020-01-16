@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentelella Alela! | </title>
+    <title>ADD SOCIETY </title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -108,9 +108,46 @@
                     <form action="../Add_Society_Servlet" method="post" class="form-horizontal form-label-left" novalidate>
 
                      
-                      <span class="section">Society Info</span>
+                     
+                      
+                      
+                      
+                       <div id="wizard" class="form_wizard wizard_horizontal">
+                      <ul class="wizard_steps">
+                        <li>
+                          <a href="#step-1">
+                            <span class="step_no">1</span>
+                            <span class="step_descr">
+                                              Step 1<br />
+                                              <small>Step 1 description</small>
+                                          </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#step-2">
+                            <span class="step_no">2</span>
+                            <span class="step_descr">
+                                              Step 2<br />
+                                              <small>Step 2 description</small>
+                                          </span>
+                          </a>
+                        </li>
+                        
+                        
+      <li>
+                          <a href="#step-3">
+                            <span class="step_no">3</span>
+                            <span class="step_descr">
+                                              Step 3<br />
+                                              <small>Step 3 description</small>
+                                          </span>
+                          </a>
+                        </li>
+                      </ul>
+                              <div id="step-1">
+                        <form class="form-horizontal form-label-left">
 
-                      <div class="item form-group">
+                 <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="name">Name <span class="required">*</span>
                        
                         <span class="fa fa-institution" aria-hidden="true"></span>
@@ -119,6 +156,7 @@
                           <input id="name" class="form-control" data-validate-length-range="6" data-validate-words="2" name="society_name" placeholder="socity name" required="required" type="text">
                         </div>
                       </div>
+                          
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="email">Email <span class="required">*</span>
                        <span class="fa fa-envelope-square" aria-hidden="true"></span>
@@ -128,8 +166,7 @@
                       
                         </div>
                       </div>
-                      
-                      <div class="item form-group">
+                          <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="telephone">Telephone <span class="required">*</span>
                         <span class="fa fa-phone" aria-hidden="true"></span>
                         </label>
@@ -138,7 +175,7 @@
                         </div>
                       </div>
                       
-                      <div class="item form-group">
+                           <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="website">Website URL <span class="required">*</span>
                         <span class="fa fa-globe" aria-hidden="true"></span>
                         </label>
@@ -146,12 +183,43 @@
                           <input type="url" id="website" name="society_website" required="required" placeholder="www.website.com" class="form-control">
                         </div>
                       </div>
+                            <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="contact_person">Contact Person<span class="required">*</span>
+                       
+                        <span class="fa fa-user" aria-hidden="true"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6">
+                          <input id="name" class="form-control" data-validate-length-range="6" data-validate-words="2" name="society_contact_person" placeholder="" required="required" type="text">
+                        </div>
+                      </div>
+
+ 
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="contact_person_contact_number">Contact Person Contact Number <span class="required">*</span>
+                       <span class="fa fa-phone" aria-hidden="true"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6">
+                          <input type="tel" id="telephone" name="society_contact_person_number" required="required" data-validate-length-range="8,20" class="form-control">
+                        </div>
+                      </div>
                       
+                       <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="textarea">Address<span class="required">*</span>
+                        <span class="fa fa-building" aria-hidden="true"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6">
+                          <textarea id="textarea" required="required" name="society_address" class="form-control"></textarea>
+                        </div>
+                      </div>
                       
-                      
-                    
-                      
-                     <div class="item form-group">
+
+                        </form>
+
+                      </div>
+        
+                      <div id="step-2">
+                        <form class="form-horizontal form-label-left">
+                       <div class="item form-group">
                      <label class="col-form-label col-md-3 col-sm-3 label-align" for="Registration Year">Registration Year <span class="required">*</span>
                         <span class="fa fa-calendar" aria-hidden="true"></span>
                         </label>
@@ -167,39 +235,26 @@
                         </div>
                     </div>
                 </div>
-                     
                       
-                    
-                      
-                  
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="Office Number">Office Number <span class="required">*</span>
-                       <span class="fa fa-suitcase" aria-hidden="true"></span>
-                        </label>
-                        <div class="col-md-6 col-sm-6">
-                          <input type="tel" id="telephone" name="society_office_number" required="required" data-validate-length-range="8,20" class="form-control">
-                        </div>
-                      </div>
-                      
-                      
-                      <div class="item form-group">
+                    <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="registration number">Registration Number <span class="required">*</span>
                        <span class="fa fa-file-text-o" aria-hidden="true"></span>
                         </label>
                         <div class="col-md-6 col-sm-6">
                           <input type="tel" id="telephone" name="society_registration_number" required="required" data-validate-length-range="8,20" class="form-control">
                         </div>
-                      </div>
-                      <div class="item form-group">
+                      </div>  
+                      
+                     <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="Office Number">Office Number <span class="required">*</span>
+                       <span class="fa fa-suitcase" aria-hidden="true"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6">
+                          <input type="tel" id="telephone" name="society_office_number" required="required" data-validate-length-range="8,20" class="form-control">
+                        </div>
+                      </div>  
+                    
+                               <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="u-dise number">U-DISE Number <span class="required">*</span>
                        <span class="fa fa-file-text-o" aria-hidden="true"></span>
                         </label>
@@ -216,45 +271,58 @@
                           <input type="tel" id="telephone" name="number_of_schools" required="required" data-validate-length-range="8,20" class="form-control">
                         </div>
                       </div>
+                     
+                         </form>
+                         
+                      </div>
                       
-                      
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="contact_person">Contact Person<span class="required">*</span>
+                        <div id="step-3">
+                        <form class="form-horizontal form-label-left">
+
+                 <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="name">UserId <span class="required">*</span>
                        
-                        <span class="fa fa-user" aria-hidden="true"></span>
+                        <span class="fa fa-edit" aria-hidden="true"></span>
                         </label>
                         <div class="col-md-6 col-sm-6">
-                          <input id="name" class="form-control" data-validate-length-range="6" data-validate-words="2" name="society_contact_person" placeholder="" required="required" type="text">
+                          <input id="user" class="form-control" data-validate-length-range="6" data-validate-words="2" name="user_id" required="required" type="text">
                         </div>
-                      </div>
+                      </div>    
                       
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="contact_person_contact_number">Contact Person Contact Number <span class="required">*</span>
-                       <span class="fa fa-phone" aria-hidden="true"></span>
+                       <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="password">Password <span class="required">*</span>
+                       
+                        <span class="fa fa-key" aria-hidden="true"></span>
                         </label>
                         <div class="col-md-6 col-sm-6">
-                          <input type="tel" id="telephone" name="society_contact_person_number" required="required" data-validate-length-range="8,20" class="form-control">
+                          <input id="password" class="form-control" data-validate-length-range="6" data-validate-words="2" name="password" required="required" type="password">
                         </div>
-                      </div>
+                      </div>    
                       
-                      
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="textarea">Address<span class="required">*</span>
-                        <span class="fa fa-building" aria-hidden="true"></span>
+                       <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="conform_password">Conform Password <span class="required">*</span>
+                       
+                        <span class="fa fa-key" aria-hidden="true"></span>
                         </label>
                         <div class="col-md-6 col-sm-6">
-                          <textarea id="textarea" required="required" name="society_address" class="form-control"></textarea>
+                          <input id="conform_password" class="form-control" data-validate-length-range="6" data-validate-words="2" name="conform_password" required="required" type="password">
                         </div>
-                      </div>
+                      </div>    
+                     
+                      
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 offset-md-3">
                           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                          <button type="submit" class="btn btn-primary">Cancel</button>
                           <button id="send" type="submit" class="btn btn-success">Submit</button>
-                        </div>
+                          <button type="submit" class="btn btn-primary">Cancel</button>
+                           </div>
                       </div>
+                      </form>
+                      </div>
+                      </div>
+                                 
                     </form>
                   </div>
                 </div>
@@ -264,6 +332,7 @@
         </div>
         
         
+       
                 <!-- /page content -->
                 
                 
@@ -293,10 +362,14 @@
     <script src="../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="../vendors/nprogress/nprogress.js"></script>
+    
+      <!-- jQuery Smart Wizard -->
+    <script src="../vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
     <!-- validator -->
     <script src="../vendors/validator/validator.js"></script>
      <script src="../vendors/moment/min/moment.min.js"></script>
     <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    
    
  <script src="../vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
  
