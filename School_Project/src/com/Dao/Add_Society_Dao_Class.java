@@ -25,7 +25,7 @@ public class Add_Society_Dao_Class implements Add_Society_Dao_Interface{
 			
 			System.out.println("$$$$$$$ inside try  $$$$$$$$$$");
 			
-			PreparedStatement ps =con.prepareStatement("insert into society_master(society_name,society_email,society_telephone,society_website,society_registration_year,society_office_no,society_registration_no,society_udise_no,society_number_of_schools,society_contact_person	,society_contact_p_number,society_address)values(?,?,?,?,?,?,?,?,?,?,?,?)");
+			PreparedStatement ps =con.prepareStatement("insert into society_master(society_name,society_email,society_telephone,society_website,society_registration_year,society_office_no,society_registration_no,society_udise_no,society_total_schools,society_number_of_schools,society_contact_person	,society_contact_p_number,society_address)values(?,?,?,?,?,?,?,?,?,?,?,?,?)");
 			
 			ps.setString(1, ASB.getSociety_name());
 			ps.setString(2, ASB.getSociety_email());
@@ -35,10 +35,11 @@ public class Add_Society_Dao_Class implements Add_Society_Dao_Interface{
 			ps.setLong(6, ASB.getSociety_office_number());
 			ps.setLong(7, ASB.getSociety_registration_number());
 			ps.setLong(8,  ASB.getSociety_udise_number());
-			ps.setInt(9, ASB.getSociety_number_of_schools());
-			ps.setString(10,ASB.getSociety_contact_person());
-			ps.setLong(11, ASB.getSociety_contact_p_number());
-			ps.setString(12, ASB.getSociety_address());
+			ps.setInt(9, ASB.getSociety_total_schools());
+			ps.setInt(10, ASB.getSociety_number_of_schools());
+			ps.setString(11,ASB.getSociety_contact_person());
+			ps.setLong(12, ASB.getSociety_contact_p_number());
+			ps.setString(13, ASB.getSociety_address());
 
 			status=ps.executeUpdate();
 			System.out.println("******************* "+status);
@@ -51,4 +52,39 @@ public class Add_Society_Dao_Class implements Add_Society_Dao_Interface{
 			return status;
 	
 	}
-}
+	
+	public int school_login(Add_Society_Bean ASB) {
+		int status = 0;
+		
+		System.out.println("%%%%%%%%%%%%%%% before insert query  %%%%%%%%%%%%%");
+		
+	
+		
+		try {
+			
+			
+			System.out.println("$$$$$$$ inside try  $$$$$$$$$$");
+			
+			PreparedStatement ps =con.prepareStatement("insert into school_login (	user_id,password,conform_password) values (?,?,?)");
+			
+			ps.setString(1, ASB.getSchool_userid());
+			ps.setString(2, ASB.getSchool_password());
+			ps.setString(3, ASB.getSchool_c_password());
+			
+
+
+			status=ps.executeUpdate();
+			System.out.println("******************* "+status);
+			
+			
+		} catch (Exception e) {
+			System.out.println("in catch");
+		}
+	
+			return status;
+	
+	}
+		
+	}
+	
+

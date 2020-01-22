@@ -50,10 +50,16 @@ public class Add_Society_Servlet extends HttpServlet {
 		long society_office_number=Long.parseLong(request.getParameter("society_office_number"));
 		long society_registration_number=Long.parseLong(request.getParameter("society_registration_number"));
 		long society_udise_number=Long.parseLong(request.getParameter("society_udise_number"));
+		int society_total_schools=Integer.parseInt(request.getParameter("total_number_of_schools"));
 		int society_number_of_schools=Integer.parseInt(request.getParameter("number_of_schools"));
 		String society_contact_person=request.getParameter("society_contact_person");
 		long society_contact_p_number=Long.parseLong(request.getParameter("society_contact_person_number"));
 		String society_address = request.getParameter("society_address");
+		
+		String school_userid = request.getParameter("user_id");
+		String school_password=request.getParameter("password");
+		String school_c_password=request.getParameter("conform_password");
+		
 		
 		Add_Society_Bean ASB= new Add_Society_Bean();
 		
@@ -65,10 +71,15 @@ public class Add_Society_Servlet extends HttpServlet {
 		ASB.setSociety_office_number(society_office_number);
 		ASB.setSociety_registration_number(society_registration_number);
 		ASB.setSociety_udise_number(society_udise_number);
+		ASB.setSociety_total_schools(society_total_schools);
 		ASB.setSociety_number_of_schools(society_number_of_schools);
 		ASB.setSociety_contact_person(society_contact_person);
 		ASB.setSociety_contact_p_number(society_contact_p_number);
 		ASB.setSociety_address(society_address);
+		
+		ASB.setSchool_userid(school_userid);
+		ASB.setSchool_password(school_password);
+		ASB.setSchool_c_password(school_c_password);
 		
 		System.out.println("name :" +ASB.getSociety_name());
 		System.out.println("email :" +ASB.getSociety_email());
@@ -78,6 +89,7 @@ public class Add_Society_Servlet extends HttpServlet {
 		System.out.println("offic no. :" +ASB.getSociety_office_number());
 		System.out.println("reg number :" +ASB.getSociety_registration_number());
 		System.out.println("udise no. :" +ASB.getSociety_udise_number());
+		System.out.println("total_school" +ASB.getSociety_total_schools());
 		System.out.println("no. of school :" +ASB.getSociety_number_of_schools());
 		System.out.println("con person :" +ASB.getSociety_contact_person());
 		System.out.println("con person no:" +ASB.getSociety_contact_p_number());
@@ -86,23 +98,29 @@ public class Add_Society_Servlet extends HttpServlet {
 		
 
 		int status=0;
+		int Login_Status=0;
 		
 		Add_Society_Dao_Interface ASD=new Add_Society_Dao_Class();
 		
 		status=ASD.insert_society_details(ASB);
+		Login_Status=ASD.school_login(ASB);
+		
+		
+		
+		
 		System.out.println("STATUS    "+status);
-		if(status>0)
+		System.out.println("Login status" +Login_Status);
+		if(status >0 && Login_Status >0)
 		{
 			System.out.println("insert Successful");
-			RequestDispatcher rd = request.getRequestDispatcher("view/afterlogin.jsp");
-			rd.forward(request, response);
-			
+//			RequestDispatcher rd = request.getRequestDispatcher("view/afterlogin.jsp");
+//			rd.forward(request, response);
+			response.sendRedirect("view/afterlogin.jsp");
 		}
 		else
 		{
 			System.out.println("insert unsuccessful");
-			RequestDispatcher rd= request.getRequestDispatcher("afterlogin.jsp");
-			rd.forward(request, response);
+		response.sendRedirect("view/afterlogin");
 		}
 	}
 

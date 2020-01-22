@@ -22,6 +22,8 @@
     <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
     <!-- bootstrap-datetimepicker -->
     <link href="../vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
+  	
+  
   </head>
 
   <body class="nav-md">
@@ -105,7 +107,7 @@
                   </div>
                   <div class="x_content">
 
-                    <form action="../Add_Society_Servlet" method="post" class="form-horizontal form-label-left" novalidate>
+                    <form action="../Add_Society_Servlet" id ="form1" method="post" class="form-horizontal form-label-left" novalidate>
 
                      
                      
@@ -145,7 +147,7 @@
                         </li>
                       </ul>
                               <div id="step-1">
-                        <form class="form-horizontal form-label-left">
+                        
 
                  <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="name">Name <span class="required">*</span>
@@ -153,7 +155,7 @@
                         <span class="fa fa-institution" aria-hidden="true"></span>
                         </label>
                         <div class="col-md-6 col-sm-6">
-                          <input id="name" class="form-control" data-validate-length-range="6" data-validate-words="2" name="society_name" placeholder="socity name" required="required" type="text">
+                          <input id="name" class="form-control" data-validate-length-range="6" data-validate-words="2" name="society_name" required="required" type="text">
                         </div>
                       </div>
                           
@@ -180,7 +182,7 @@
                         <span class="fa fa-globe" aria-hidden="true"></span>
                         </label>
                         <div class="col-md-6 col-sm-6">
-                          <input type="url" id="website" name="society_website" required="required" placeholder="www.website.com" class="form-control">
+                          <input type="url" id="website" name="society_website" required="required"  class="form-control">
                         </div>
                       </div>
                             <div class="item form-group">
@@ -189,7 +191,7 @@
                         <span class="fa fa-user" aria-hidden="true"></span>
                         </label>
                         <div class="col-md-6 col-sm-6">
-                          <input id="name" class="form-control" data-validate-length-range="6" data-validate-words="2" name="society_contact_person" placeholder="" required="required" type="text">
+                          <input id="name" class="form-control" data-validate-length-range="6"  name="society_contact_person" placeholder="" required="required" type="text">
                         </div>
                       </div>
 
@@ -213,12 +215,12 @@
                       </div>
                       
 
-                        </form>
+                      
 
                       </div>
         
                       <div id="step-2">
-                        <form class="form-horizontal form-label-left">
+                       
                        <div class="item form-group">
                      <label class="col-form-label col-md-3 col-sm-3 label-align" for="Registration Year">Registration Year <span class="required">*</span>
                         <span class="fa fa-calendar" aria-hidden="true"></span>
@@ -241,7 +243,7 @@
                        <span class="fa fa-file-text-o" aria-hidden="true"></span>
                         </label>
                         <div class="col-md-6 col-sm-6">
-                          <input type="tel" id="telephone" name="society_registration_number" required="required" data-validate-length-range="8,20" class="form-control">
+                          <input type="number" name="society_registration_number" required="required"  class="form-control">
                         </div>
                       </div>  
                       
@@ -250,7 +252,7 @@
                        <span class="fa fa-suitcase" aria-hidden="true"></span>
                         </label>
                         <div class="col-md-6 col-sm-6">
-                          <input type="tel" id="telephone" name="society_office_number" required="required" data-validate-length-range="8,20" class="form-control">
+                          <input type="number" name="society_office_number" required="required"  class="form-control">
                         </div>
                       </div>  
                     
@@ -259,77 +261,86 @@
                        <span class="fa fa-file-text-o" aria-hidden="true"></span>
                         </label>
                         <div class="col-md-6 col-sm-6">
-                          <input type="tel" id="telephone" name="society_udise_number" required="required" data-validate-length-range="8,20" class="form-control">
+                          <input type="number" name="society_udise_number" required="required"  class="form-control">
+                        </div>
+                      </div>
+                      
+                       <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="number_of_schools">Total Number of Schools<span class="required">*</span>
+                       <span class="fa fa-book" aria-hidden="true"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6">
+                          <input type="number"  name="total_number_of_schools" required="required"  class="form-control">
                         </div>
                       </div>
                       
                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="number_of_schools">Number of Schools<span class="required">*</span>
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="number_of_schools">Number of Schools for Registration<span class="required">*</span>
                        <span class="fa fa-book" aria-hidden="true"></span>
                         </label>
                         <div class="col-md-6 col-sm-6">
-                          <input type="tel" id="telephone" name="number_of_schools" required="required" data-validate-length-range="8,20" class="form-control">
+                          <input type="number" name="number_of_schools" required="required"  class="form-control">
                         </div>
                       </div>
                      
-                         </form>
+                        
                          
                       </div>
                       
                         <div id="step-3">
-                        <form class="form-horizontal form-label-left">
+                       
 
                  <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="name">UserId <span class="required">*</span>
                        
-                        <span class="fa fa-edit" aria-hidden="true"></span>
+                        <span class="fa fa-user" aria-hidden="true"></span>
                         </label>
                         <div class="col-md-6 col-sm-6">
-                          <input id="user" class="form-control" data-validate-length-range="6" data-validate-words="2" name="user_id" required="required" type="text">
+                          <input id="user" class="form-control"  name="user_id" required="required" type="text">
                         </div>
                       </div>    
                       
-                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="password">Password <span class="required">*</span>
                        
-                        <span class="fa fa-key" aria-hidden="true"></span>
-                        </label>
-                        <div class="col-md-6 col-sm-6">
-                          <input id="password" class="form-control" data-validate-length-range="6" data-validate-words="2" name="password" required="required" type="password">
-                        </div>
-                      </div>    
                       
-                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="conform_password">Conform Password <span class="required">*</span>
                        
-                        <span class="fa fa-key" aria-hidden="true"></span>
-                        </label>
+                      <div class="item form-group">
+                        <label for="password" class="col-form-label col-md-3 label-align">Password
+                         <span class="required">*</span>
+                        <span class="fa fa-key" aria-hidden="true"></span></label>
                         <div class="col-md-6 col-sm-6">
-                          <input id="conform_password" class="form-control" data-validate-length-range="6" data-validate-words="2" name="conform_password" required="required" type="password">
+                          <input id="password" type="password" name="password" data-validate-length="6,8" class="form-control" required="required">
                         </div>
-                      </div>    
-                     
+                      </div>
+                      <div class="item form-group">
+                        <label for="password2" class="col-form-label col-md-3 col-sm-3 label-align ">Conform Password
+                         <span class="required">*</span>
+                        <span class="fa fa-key" aria-hidden="true"></span></label>
+                        <div class="col-md-6 col-sm-6">
+                          <input id="password2" type="password" name="conform_password" data-validate-linked="password" class="form-control" required="required">
+                        </div>
+                      </div>
                       
                       <div class="ln_solid"></div>
                       <div class="form-group">
-                        <div class="col-md-6 offset-md-3">
-                          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                          <button id="send" type="submit" class="btn btn-success">Submit</button>
+                        <div class="col-md-6 offset-md-3" align="center">
+                           
+                          <button id="send" type="submit" class="btn btn-success" >Submit</button>
                           <button type="submit" class="btn btn-primary">Cancel</button>
                            </div>
+                          
                       </div>
                       </form>
                       </div>
                       </div>
                                  
-                    </form>
+             
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+      </div>
+      </div>
+      
         
         
        
@@ -343,12 +354,12 @@
 
         <!-- footer content -->
 
-       <!--    <div>
+        <div>
           
              <jsp:include page="../Common_Files/Footer.jsp"/>
            
          </div>
-        -->
+        
           
         <!-- /footer content -->
       
@@ -387,7 +398,8 @@
         format: 'DD.MM.YYYY'
     });
     
-   
+
+    
 </script>
 
 	

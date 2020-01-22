@@ -12,12 +12,44 @@ public class Add_Society_Bean {
 	private long society_office_number;
 	private long society_registration_number;
 	private long society_udise_number;
+	private int society_total_schools;
+
 	private int society_number_of_schools;
+	
 	private String society_contact_person;
 	private long society_contact_p_number;
 	private String society_address;
 	
+	private String school_userid;
+	private String school_password;
+	private String school_c_password;
 	
+	
+	public int getSociety_total_schools() {
+		return society_total_schools;
+	}
+	public void setSociety_total_schools(int society_total_schools) {
+		this.society_total_schools = society_total_schools;
+	}
+	
+	public String getSchool_userid() {
+		return school_userid;
+	}
+	public void setSchool_userid(String school_userid) {
+		this.school_userid = school_userid;
+	}
+	public String getSchool_password() {
+		return school_password;
+	}
+	public void setSchool_password(String school_password) {
+		this.school_password = school_password;
+	}
+	public String getSchool_c_password() {
+		return school_c_password;
+	}
+	public void setSchool_c_password(String school_c_password) {
+		this.school_c_password = school_c_password;
+	}
 	public int getId() {
 		return id;
 	}
